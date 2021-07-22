@@ -1,0 +1,310 @@
+/* 基本スタイル */
+
+@charset "utf-8";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #220533;
+	transition: 1s;
+}
+
+/* デバッグ情報 */
+.debug {
+	background: rgba(100, 100, 100, 0.3);
+	color: cornsilk;
+
+	width: fit-content;
+	height: fit-content;
+	position: fixed;
+	right: 0;
+
+	padding: 5px;
+}
+
+/* 目次の表示切り替えボタン */
+input {
+	opacity: 0;
+}
+
+.contentListButton {
+	filter: drop-shadow(0px 0px 25px yellow);
+
+	position: fixed;
+	top: 20px;
+	left: 430px;
+	z-index: 1000;
+}
+
+.contentListButton:checked ~ .contentList {
+	transition-duration: 1s;
+	transform: translateY(0px);
+}
+
+.contentListButtonGuide {
+	color: white;
+	font-weight: bold;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+	position: fixed;
+	top: 20px;
+	left: 510px;
+	z-index: 1000;
+
+	/* 徐々に消える */
+	animation: fadeOut 1s linear 3s reverse both running;
+	opacity: 1;
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* 直に書くとぐしゃってなっちゃう */
+@media (min-width: 768px) {
+	.contentListButtonGuide::before {
+		content: "← ";
+	}
+}
+
+/* 目次 */
+.contentList {
+	background: silver;
+	border-radius: 0px 0px 30px 30px;
+
+	display: flex;
+	flex-direction: column;
+
+	top: 0;
+	left: 20px;
+	width: 400px;
+	height: fit-content;
+	position: fixed;
+	z-index: 1000;
+
+	transition-duration: 1s;
+	transform: translateY(-400px);
+}
+
+.contentList,
+.contentList::before {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.contentList::before {
+	content: "Contents";
+	font-size: 36px;
+	font-weight: bold;
+
+	margin: 30px 0px 40px 50px;
+}
+
+.contentList button {
+	font-size: 28px;
+	border: none;
+	background: transparent;
+
+	align-self: flex-start;
+
+	width: fit-content;
+	margin-left: 180px;
+	margin-bottom: 50px;
+}
+
+/* メインキャンバス */
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* トップ */
+.main .title,
+.main .titleLight {
+	font-size: 124px;
+	font-family: "Courier New", Courier, monospace;
+
+	position: absolute;
+	margin-top: 300px;
+}
+
+.main .title {
+	color: #006060;
+}
+
+.main .titleLight {
+	font-weight: bold;
+	color: rgba(128, 255, 0, 0.7);
+	text-shadow: 0 0 30px rgb(128 255 0);
+}
+
+/* プロフィール */
+.main .profileTitle {
+	font-size: 112px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	color: rgb(123, 131, 123);
+
+	margin-top: 1200px;
+}
+
+.main .profile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.main .profile p {
+	font-size: 24px;
+	color: rgb(201, 201, 201);
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.main .profile div {
+	background: rgb(68, 43, 22);
+	border-radius: 50px;
+	padding: 30px;
+	margin: 0px 30px 0px 30px;
+}
+
+/* スキル */
+.main .skillTitle {
+	font-size: 112px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	color: rgb(52, 76, 211);
+
+	margin-top: 400px;
+}
+
+.main .skill {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.main .skill .format {
+	background: gray;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding: 20px;
+	margin: 20px;
+}
+
+.main .skill .format .text {
+	display: flex;
+	flex-direction: column;
+}
+
+.main .skill .format p {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	color: lightblue;
+
+	max-width: 480px;
+	margin: 10px;
+}
+
+.main .skill .format .skillInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main .skill .format .skillInfo p {
+	font-size: 32px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	color: skyblue;
+}
+
+.main .skill .format .skillInfo img {
+	width: 128px;
+	height: 128px;
+}
+
+/* 作品 */
+.main .createdTitle {
+	font-size: 112px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	color: rgb(238, 115, 58);
+
+	margin-top: 400px;
+}
+
+.main .createdApps {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.main .createdApps .appInfo {
+	background: floralwhite;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: row;
+
+	padding: 30px;
+	margin: 30px;
+}
+
+.main .createdApps .appInfo .images {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1;
+
+	margin-right: 50px;
+}
+
+.main .createdApps .appInfo .images img {
+	width: 480px;
+	height: 270px;
+}
+
+.main .createdApps .appInfo .images img:first-child {
+	align-self: flex-start;
+
+	margin: 20px 50px 20px 50px;
+}
+
+.main .createdApps .appInfo .images img:last-child {
+	align-self: flex-end;
+
+	margin: 20px 20px 20px 50px;
+}
+
+.main .createdApps .appInfo .detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+
+	max-width: 640px;
+}
+
+.main .createdApps .appInfo .detail p,
+.main .createdApps .appInfo .detail a {
+	font-size: 26px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(70, 70, 70);
+}

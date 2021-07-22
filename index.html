@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html id="top">
+	<head>
+		<link rel="stylesheet" type="text/css" href="src/indexGeneral.css" />
+		<link rel="stylesheet" type="text/css" href="src/indexMobile.css" />
+		<script src="src/index.js"></script>
+
+		<title>My Best & Happiness & Dangerous & Incredible & Delicious Ultimate Portfolio</title>
+	</head>
+
+	<body>
+		<!-- 目次の表示切り替えボタン -->
+		<label for="contentListButton" class="contentListButton"><img src="image/Button.png" /></label>
+		<input type="checkbox" id="contentListButton" class="contentListButton" />
+		<p class="contentListButtonGuide">Push it!!</p>
+		<!-- 目次 -->
+		<div class="contentList">
+			<button type="button" onclick="ScrollTo('top');">- Top</button>
+			<button type="button" onclick="ScrollTo('profile');">- Profile</button>
+			<button type="button" onclick="ScrollTo('skill');">- Skill</button>
+			<button type="button" onclick="ScrollTo('created');">- Created</button>
+		</div>
+
+		<!-- メインキャンバス -->
+		<div class="main">
+			<!-- タイトル -->
+			<p class="title">Portfolio</p>
+			<p class="titleLight">Portfolio</p>
+
+			<!-- プロフィール -->
+			<p class="profileTitle" id="profile">Profile</p>
+			<div class="profile">
+				<div class="standard">
+					<p>Name : Miyoshi Takuto</p>
+					<p>Age : 17</p>
+					<p>Birth : 2003</p>
+					<p>Blood Type : A</p>
+					<p>Like : Cooking</p>
+					<p>Unlike : Injection</p>
+				</div>
+
+				<div class="promotion">
+					<p>こんにちは。</p>
+					<p>私はC系をメインにいくつかの言語とツールを使い、ゲーム開発をしている専門学生です。</p>
+					<p>現在('21/7月)は、C++をメインに勉強しています。</p>
+					<p>コードを書く上で意識しているのは、保守性の高いコードにすることです。</p>
+					<p>具体的には『読みやすい 拡張しやすい 安全性が高い』これらを意識しています。</p>
+				</div>
+			</div>
+
+			<!-- スキル -->
+			<p class="skillTitle" id="skill">Skill</p>
+			<div class="skill">
+				<div class="format">
+					<div class="skillInfo">
+						<p>C</p>
+						<img src="image/CIcon.png" />
+					</div>
+					<p>最初に学習を始めた言語で大まかに仕組みを理解しています。</p>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>C++</p>
+						<img src="image/CppIcon.png" />
+					</div>
+					<p>メインで使用している言語で、Cの要素を無くすことを意識して使用しています。</p>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>C#</p>
+						<img src="image/CSharpIcon.png" />
+					</div>
+					<div class="text">
+						<p>Unityで使用しています。</p>
+						<p>C++と同じくCの要素を無くすことを意識して使用しています。</p>
+						<p>C#特有のLINQやプロパティなどの仕組みを理解しています。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>JavaScript</p>
+						<img src="image/JSIcon.png" />
+					</div>
+					<div class="text">
+						<p>HTMLの機能の一部を実装するために使用しています。</p>
+						<p>JavaScriptにおける動的型付などの癖を把握しています。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>HTML5</p>
+						<img src="image/HTMLIcon.png" />
+					</div>
+					<div class="text">
+						<p>ウェブサイトを作るときに使用しています。</p>
+						<p>基本的な書き方やルールを把握しています。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>CSS3</p>
+						<img src="image/CSSIcon.png" />
+					</div>
+					<p>HTMLとセットで使用しており、基本的な書き方を把握しています。</p>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>Unity</p>
+						<img src="image/UnityIcon.png" />
+					</div>
+					<div class="text">
+						<p>複雑な3Dゲームを作る時や、視覚化して確認したいことがある時などに使用しています。</p>
+						<p>Unity特有の機能を把握しており、UniTaskやInputSystemなど拡張機能の使用経験もあります。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>DxLib</p>
+						<img src="image/DxLibIcon.jpg" />
+					</div>
+					<div>
+						<p>ゲームを作る時は基本的にこのライブラリを使用しています。</p>
+						<p>メインで使用しているライブラリなので、癖やどういった構造にすれば良いかを理解しています。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>Visual Studio</p>
+						<img src="image/VSIcon.png" />
+					</div>
+					<p>メインで使用しているIDEで、基本的な操作から詳細設定まである程度把握しています。</p>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>Visual Studio Code</p>
+						<img src="image/VSCodeIcon.png" />
+					</div>
+					<div class="text">
+						<p>メインで使用しているテキストエディタです。</p>
+						<p>Visual Studioよりも軽く、拡張機能も充実しているため、コーディングもこちらで行っています。</p>
+						<p>また、C++をMinGW(gcc)で簡単にビルドできる設定もしています。</p>
+					</div>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>GitHub</p>
+						<img src="image/GitHubIcon.png" />
+					</div>
+					<p>複数人で開発を行う時や、コードをウェブ上で公開したい時に使用しています。</p>
+				</div>
+
+				<div class="format">
+					<div class="skillInfo">
+						<p>SourceTree</p>
+						<img src="image/SourceTreeIcon.png" />
+					</div>
+					<div class="text">
+						<p>GitHubとファイルを送受信する時に使用しています。</p>
+						<p>GUIでの操作が主ですが、簡単な操作はコンソールでも行えます。</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 作品 -->
+			<p class="createdTitle" id="created">Created</p>
+			<div class="createdApps">
+				<div class="appInfo">
+					<div class="images">
+						<img src="image/AutoScrollCraftTitle.jpg" />
+						<img src="image/AutoScrollCraftGame.jpg" />
+					</div>
+
+					<div class="detail">
+						<p>Auto Scroll Craft</p>
+						<p>Unity / C#</p>
+						<p>3ヶ月</p>
+						<p>Unityで個人制作したアドベンチャーゲームです。 木や岩を破壊してアイテムを手に入れ、敵を倒しながら先へ進みハイスコアを目指します。</p>
+						<a href="https://github.com/Takuto-Miyoshi/UnityAutoScrollCraft" target="_blank">Repository</a>
+					</div>
+				</div>
+
+				<div class="appInfo">
+					<div class="images">
+						<img src="image/SlackClient.jpg" />
+					</div>
+
+					<div class="detail">
+						<p>Slack Client</p>
+						<p>HTML5 / JavaScript</p>
+						<p>約1週間</p>
+						<p>ウェブ上でSlackにメッセージを送ったり、確認したりできるツールです。 LINEのUIに近づくように作りました。 メッセージの送受信,添付ファイルの確認,送信日時の確認ができます。</p>
+						<p>※Privateリポジトリのためリンクはありません。</p>
+					</div>
+				</div>
+
+				<div class="appInfo">
+					<div class="images">
+						<img src="image/Shooting.jpg" />
+					</div>
+
+					<div class="detail">
+						<p>Shooting(仮)</p>
+						<p>DxLib / C++</p>
+						<p>2週間～ (制作途中)</p>
+						<p>現在('21/7月)制作中のシューティングゲームです。 初めて使う機能や数学など、自分の中での新しいものに挑戦しています。 多くの敵や弾の中を、武器やスキルを使って掻い潜るゲームになる予定です。</p>
+						<a href="https://github.com/Takuto-Miyoshi/Shooting" target="_blank">Repository</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- サイト情報 -->
+			<p>Latest:2021/7/22 @ Miyoshi-Takuto</p>
+		</div>
+	</body>
+</html>

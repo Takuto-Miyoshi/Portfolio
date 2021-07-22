@@ -1,0 +1,86 @@
+/* モバイル向けのデザイン */
+
+@charset "utf-8";
+
+@media (max-width: 767px) {
+	/* トップ */
+	.main .title,
+	.main .titleLight {
+		font-size: 90px;
+	}
+
+	/* 目次表示ボタンへの誘導 */
+	.contentListButtonGuide {
+		top: 65px;
+		left: 375px;
+	}
+
+	.contentListButtonGuide::after {
+		content: " ↑";
+	}
+
+	/* プロフィール */
+	.main .profileTitle {
+		font-size: 84px;
+	}
+
+	.main .profile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.main .profile div {
+		margin: 30px 0px 30px 0px;
+	}
+
+	/* スキル */
+	.main .skillTitle {
+		font-size: 84px;
+
+		margin-top: 200px;
+	}
+
+	.main .skill {
+		flex-direction: column;
+	}
+
+	/* 作品 */
+	.main .createdTitle {
+		font-size: 84px;
+
+		margin-top: 200px;
+	}
+
+	.main .createdApps,
+	.main .createdApps .appInfo {
+		flex-direction: column;
+	}
+
+	.main .createdApps .appInfo .images {
+		flex: none;
+
+		margin-right: 0px;
+	}
+
+	.main .createdApps .appInfo .images img {
+		width: 420px;
+		height: 236px;
+	}
+
+	.main .createdApps .appInfo .images img:first-child,
+	.main .createdApps .appInfo .images img:last-child {
+		align-self: center;
+
+		margin: 10px 0px 10px 0px;
+	}
+
+	.main .createdApps .appInfo .detail {
+		flex: none;
+	}
+
+	.main .createdApps .appInfo .detail p,
+	.main .createdApps .appInfo .detail a {
+		font-size: 20px;
+	}
+}
